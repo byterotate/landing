@@ -13,7 +13,11 @@
         let url = r.exec(window.location.search)?.[1]
         let jumpUrl = decodeURIComponent(url)
         window.open(decodeURIComponent(jumpUrl), '_blank')
-        window.close()
+        
+        
+        window.opener=null;
+        window.open('','_self');
+        window.close();
     </script>
 </body>
 </html>
