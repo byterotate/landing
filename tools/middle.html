@@ -8,10 +8,11 @@
 </head>
 <body>
     <script>
-        let r = new RegExp("[&|\?]url=(.*)(?=&|$)")
         debugger
-        let jumpUrl = r.exec(window.location.search)
-        window.location.href = decodeURIComponent(jumpUrl)
+        let r = new RegExp("[&|\?]url=(.*)(?=&|$)")
+        let url = r.exec(window.location.search)?.[1]
+        let jumpUrl = decodeURIComponent(url)
+        window.open(decodeURIComponent(jumpUrl), '_blank')
         window.close()
     </script>
 </body>
