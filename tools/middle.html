@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-        debugger
+        // debugger
         let r = new RegExp("[&|\?]url=(.*)(?=&|$)")
         let url = r.exec(window.location.search)?.[1]
         let jumpUrl = decodeURIComponent(url)
