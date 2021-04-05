@@ -8,7 +8,10 @@
 </head>
 <body>
     <script>
-        
+        let r = new RegExp("[&|\?]url=(.*)(?=&|$)")
+        let jumpUrl = r.exec(window.location.search)
+        window.location.href = decodeURIComponent(jumpUrl)
+        window.close()
     </script>
 </body>
 </html>
